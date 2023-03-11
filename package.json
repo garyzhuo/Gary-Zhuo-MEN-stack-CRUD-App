@@ -1,0 +1,29 @@
+{
+  "name": "gary-zhuo-men-stack-crud-app",
+  "version": "1.0.0",
+  "description": "A README.md file that includes the following sections:  An embedded screenshot of the app  List of the Technologies used  Installation instructions  Your User stories – who are your users, what do they want and why?  Your Wireframes – sketches of major views / interfaces in your application  Descriptions of any Unsolved problems or major hurdles you had to overcome",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garyzhuo/Gary-Zhuo-MEN-stack-CRUD-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garyzhuo/Gary-Zhuo-MEN-stack-CRUD-App/issues"
+  },
+  "homepage": "https://github.com/garyzhuo/Gary-Zhuo-MEN-stack-CRUD-App#readme",
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "livereload": "^0.9.3",
+    "mongoose": "^7.0.1"
+  }
+}
