@@ -22,9 +22,16 @@ router.get('/', function (req, res) {
 })
 
 //Shows route: will display an individual item document.
+// this route down here will display the espresso by their ID's.
+// so you can search for each espressos.
 router.get('/:id', function(req, res) {
     db.Espresso.findById(req.params.id)
-    .then(espresso => res.json(espresso))
+    .then(espresso => {
+        // this will grab each indivdual espresso and show them according when selected on 'Learn More'
+        res.render('espresso-details', {
+            espresso: espresso
+            })
+        })
     .catch(() => res.send('404 Error: Page Not Found'))
 })
 

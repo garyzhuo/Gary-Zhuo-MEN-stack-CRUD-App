@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Espresso Emporium'}) %>
+    <link rel="stylesheet" href="/styles/espresso-details.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div>
+        <img src="<%= espresso.photo %>">
+        <h2 class="espresso-name"><%= espresso.name %></h2>
+        <section>
+            <p id="espressoDetails"><strong></strong> <%= espresso.description %></p>
+            <p id="espressoRoast"><strong>Roast Type: </strong> <%= espresso.roast %></p>
+        </section>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

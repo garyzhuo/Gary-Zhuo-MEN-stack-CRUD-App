@@ -10,8 +10,9 @@
     <%- include('./partials/nav.ejs') %>
 
     <main>
-        <section class="listings">
+        <section class="allEspressos">
             <h1>Espressos</h1>
+            <ul class="espresso-grid">
             <ul>
                 <% for (let espresso of espressos) { %>
                 <li>
@@ -19,12 +20,13 @@
                         <img src="<%= espresso.photo %>">
                         <figcaption>
                             <h4><%= espresso.name %></h4>
-                            <p><%= espresso.breed %></p>
-                            <a href="/espressos/<%= espresso._id %>">Learn More</a>
+                            <p><strong>Roast: </strong><%= espresso.roast %></p>
+                            <a href="/espressos/<%= espresso._id %>" class="btn">Learn More</a>
                         </figcaption>
                     </figure>
                 </li>
                 <% } %>
+            </ul>
             </ul>
         </section>
     </main>
