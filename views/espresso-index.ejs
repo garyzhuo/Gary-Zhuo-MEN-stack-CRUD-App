@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Espresso Emporium'}) %>
+    <link rel="stylesheet" href="/styles/espresso-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="listings">
+            <h1>Espressos</h1>
+            <ul>
+                <% for (let espresso of espressos) { %>
+                <li>
+                    <figure>
+                        <img src="<%= espresso.photo %>">
+                        <figcaption>
+                            <h4><%= espresso.name %></h4>
+                            <p><%= espresso.breed %></p>
+                            <a href="/espressos/<%= espresso._id %>">Learn More</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/* Reset styles for cross-browser consistency */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #6F4E37;
+}
+
+a:hover {
+    text-decoration: underline;
+opacity: 120%;
+}
+
+/* Header styles */
+header {
+    /* display: flex; */
+    font-family: 'Tilt Warp', cursive;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: #A07855;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: #F5DEB3;
+}
+
+h1 {
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+h1 a:hover {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: 570px;
+}
+
+nav li:not(:last-child) {
+    margin-right: 1rem;
+}
+
+nav a {
+    font-size: 1.2rem;
+}
+
+
+/* Hero section styles */
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #A07855;
+    color: #f3d397;
+    height: 10vh;
+}
+
+.aboutSection h2 {
+    font-size: 2.7rem;
+    margin-bottom: -1.7rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #6F4E37;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #A0522D
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #A07855;
+    width: calc(100vw - 1rem);
+    /* color: #F5DEB3; */
+}
+/* .footerNav {
+    text-align: center;
+} */
+
+footer * {
+    color: #6F4E37;
+}
+
+.footerH {
+    color: #F5DEB3;
+}
+
+/* .footerUl {
+    color: #F5DEB3;
+} */
+footer ul {
+    display: flex;
+    list-style: none;
+    margin-left: 570px;
+    font-family: 'Tilt Warp', cursive;
+}

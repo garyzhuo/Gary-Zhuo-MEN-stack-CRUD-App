@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Espresso Emporium'}) %>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="aboutSection">
+            <h2>Discover Your Perfect Espresso Match With Us!</h2>
+            <!-- <a href="/espressos" class="btn">Learn More</a> -->
+        </section>
+
+        <!-- <section class="about">
+            <h2>About Us</h2>
+            <p>At our website, we understand the importance of a good espresso, and that's why we've made it our mission to gather multiple espresso reviews in one place. Our platform is designed to make it easy for coffee lovers to browse through a variety of espresso options, with all the information they need to make an informed decision.
+
+                We believe that a good espresso should be enjoyed by everyone, and that's why we've made it our goal to provide the most comprehensive and accessible espresso reviews possible. Our team of coffee experts is constantly searching for new and exciting espresso blends, and we're always updating our platform to ensure that our users have access to the latest and greatest in the world of espresso.
+                
+                Whether you're a seasoned espresso drinker or just getting started, our website is the perfect place to explore your options and find your new favorite blend. With our user-friendly interface and extensive collection of reviews, you can browse through the best espressos on the market with ease and confidence.
+                
+                At our website, we're passionate about great coffee and helping people discover the perfect espresso for their taste preferences. So why wait? Come explore our collection of espresso reviews today and start your journey to coffee perfection!
+            </p>
+            <a href="/about" class="btn">Learn More</a>
+        </section> -->
+
+        <section class="featured-espressos">
+            <h2>Featured Espressos</h2>
+            <ul class="espresso-grid">
+                <% for (let espresso of espressos) { %>
+                <li>
+                    <figure>
+                        <img src="<%= espresso.photo %>" class='espressoImg' alt="Espresso">
+                    </figure>
+                    <figcaption>
+                        <div class="featured-info">
+                            <h3><%= espresso.name %></h3>
+                            <p><%= espresso.roast %></p>
+                            <a href="/espressos/<%= espresso._id %>" class="btn">Learn More</a>
+                        </div>
+                    </figcaption>
+                </li>
+
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

@@ -10,6 +10,16 @@ const connectLiveReload = require("connect-livereload");
 --------------------------------------------------------------- */
 const db = require('./models');
 
+
+/*Required Routes in Controller Folder
+-------------------------------------------------------------------*/
+const espressosCtrl = require('./controllers/espressos');
+const espressos = require('./models/seed');
+
+
+
+
+
 /* Create the Express app
 --------------------------------------------------------------- */
 const app = express();
@@ -23,6 +33,9 @@ liveReloadServer.server.once("connection", () => {
         liveReloadServer.refresh("/");
     }, 100);
 });
+
+
+
 
 
 /* Configure the app (app.set)
@@ -40,8 +53,33 @@ app.use(connectLiveReload());
 /* Mount routes
 --------------------------------------------------------------- */
 app.get('/', function (req, res) {
-    res.send('Espresso Emporium')
+    db.Espresso.find({ isFeatured: true })
+    .then(Espressos => {
+        res.render('home', {
+            espressos: Espressos
+        })
+    })
+})
+
+
+//this will reseed the document, removing any changes that you have implemented.
+//make sure you take out later
+app.get('/seed', function (req, res) {
+    // Remove any existing coffees that you might have added
+    db.Espresso.deleteMany({})
+        .then(removedEspressos => {
+            console.log(`Removed ${removedEspressos.deletedCount} tweets`)
+            // Seed the pets collection with the seed data
+            db.Espresso.insertMany(db.seedEspressos)
+                .then(addedEspressos => {
+                    console.log(`Added ${addedEspressos.length} espressos back to it's orginial format.`)
+                    res.json(addedEspressos)
+                })
+        })
 });
+
+
+app.use('/espressos', espressosCtrl)
 
 
 /* Tell the app to listen on the specified port

@@ -13,7 +13,7 @@ const espressos = [
         price: '$14.89',
         description: 'This blend made from 100 % specially selected Arabica coffee creates a full-bodied, intensely aromatic flavor that makes it the ultimate espresso coffee to look forward to at any time of day.',
         roast: 'Medium Roast',
-        isFeatured: false
+        isFeatured: true
     },
     {
         name: 'Café Bustelo Espresso',
@@ -29,7 +29,7 @@ const espressos = [
         price: '$7.99',
         description: 'Our family’s tradition of roasting espresso dates back to our Cuban estate where the word "coffee” was synonymous with “espresso.” Café Gaviña Espresso Continental, the first product we sold in the U.S., draws its signature rich and aromatic flavor from our Spanish origins. Our passion for that bold, balanced flavor continues to this day. Nothing can beat the rich flavor of our espressos.',
         roast: 'Espresso Roast',
-        isFeatured: false
+        isFeatured: true
     },
     {
         name: 'Starbucks Espresso Coffee',
@@ -101,7 +101,7 @@ const espressos = [
         price: '$13.93',
         description: 'Gevalia Espresso Roast House Blend Ground Coffee, crafted in the Swedish tradition, fills your mug with rich and never-bitter coffee. There are 150 years of Swedish craftsmanship brewed into this espresso coffee, delivering a complex, full bodied flavor with caramel undertones.',
         roast: 'Dark Roast',
-        isFeatured: true
+        isFeatured: false
     },
     {
         name: 'Supreme Bustelo',
@@ -125,7 +125,7 @@ const espressos = [
         price: '$14.99',
         description: 'Working to design quality from the ground up, buying coffee in ways that creates more opportunity and investments back into the growers.',
         roast: 'Medium Roast',
-        isFeatured: false,
+        isFeatured: false
     },
     {
         name: `Eight O'Clock Espresso`,
@@ -141,7 +141,23 @@ const espressos = [
         price: '$13.97',
         description: `Our signature blend is available pre-ground for your immediate consumption. Taste all the nuances and characteristics of our Miscela Originale in this new format, no need to fiddle with a grinder to get the grounds exactly right (we've already done that), just scoop and brew.`,
         roast: 'Dark Roast',
+        isFeatured: true
+    },
+    {
+        name: 'Black Rifle AK Espresso',
+        photo: 'https://m.media-amazon.com/images/I/41SEfJHGJPL.jpg',
+        price: '$17.95',
+        description: 'I started Black Rifle Coffee Company to provide a high-quality, fresh roast coffee to the pro-2A and Veteran communities. Between deployments to Iraq and Afghanistan, I worked to refine both my coffee roasting skills and my firearms skills. I have spent over a decade researching coffee, refining my roast profiles and (of course) drinking what I roast. Black Rifle Coffee is quite literally the combination of my two favorite passions. I take pride in the coffee we roast, the Veterans we employ, and the causes we support.',
+        roast: 'Medium Roast',
         isFeatured: false
+    },
+    {
+        name: 'Cafe Contempo Espresso',
+        photo: 'https://m.media-amazon.com/images/I/715CO9A-T1L._SX679_.jpg',
+        price: '$14.95',
+        description: 'Founded in 1945, our legacy spans three generations of pride, heritage, expertise, & tradition. Colonial Coffee Roasters represent three generations of commitment to the quality, freshness, and taste of the world’s finest coffees. Coffee is in our blood. It’s the essence of who we are, and we take great pride in sharing our family’s heritage and tradition with you.',
+        roast: 'Dark Roast',
+        isFeatured: true
     }
 ]
 

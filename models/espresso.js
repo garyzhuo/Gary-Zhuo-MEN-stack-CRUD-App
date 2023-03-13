@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 
 // This is my first schema, this would be used for my espresso coffee
 const espressoSchema = new mongoose.Schema({
-  name: { type: String, required: true},
+  name: String,
   photo: String,
   price: String,
-  description: { type: String, required: true},
-  roast: {type: String, requried: true},
-  isFeatured: { type: Boolean, default: false}
+  description: String,
+  isFeatured: { type: Boolean, default: false},
+  roast: String
 });
 
 
