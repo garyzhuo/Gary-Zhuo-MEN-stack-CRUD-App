@@ -37,7 +37,6 @@ liveReloadServer.server.once("connection", () => {
 
 
 
-
 /* Configure the app (app.set)
 --------------------------------------------------------------- */
 app.set('view engine', 'ejs');
@@ -47,8 +46,15 @@ app.set('views', path.join(__dirname, 'views'));
 /* Middleware (app.use)
 --------------------------------------------------------------- */
 app.use(express.static('public'))
+
+//use the connectLiveReload feature, allowing your terminal to auto refresh the pages
 app.use(connectLiveReload());
 
+
+
+//this will take the incoming strings from the body that the URL encoded and parase them
+// into an object that can be accessed in the request parameter as a property called body (req.body).
+app.use(express.urlencoded({ extended: true }));
 
 /* Mount routes
 --------------------------------------------------------------- */

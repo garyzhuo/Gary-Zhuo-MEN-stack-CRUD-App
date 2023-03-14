@@ -158,6 +158,22 @@ const espressos = [
         description: 'Founded in 1945, our legacy spans three generations of pride, heritage, expertise, & tradition. Colonial Coffee Roasters represent three generations of commitment to the quality, freshness, and taste of the world’s finest coffees. Coffee is in our blood. It’s the essence of who we are, and we take great pride in sharing our family’s heritage and tradition with you.',
         roast: 'Dark Roast',
         isFeatured: true
+    },
+    {
+        name: 'Chamberlain Coffee Fancy Mouse Espresso',
+        photo: 'https://m.media-amazon.com/images/I/7190weDSoHL._SX679_.jpg',
+        price: '$19.45',
+        description: 'A well-balanced organic coffee blend originating from Peru, Sumatra, and Papua New Guinea. Works great as an espresso brew but also as a richly harmonious filter brew. Tastes amazing as lattes or mixed into chocolate peanut butter smoothies',
+        roast: 'Medium Roast',
+        isFeatured: false
+    },
+    {
+        name: `Peet's Coffee`,
+        photo: 'https://m.media-amazon.com/images/I/41V7vCIHaXL._SX300_SY300_QL70_FMwebp_.jpg',
+        price: '$28.52',
+        description: `While many of our coffees make an excellent espresso, this is the first blend we created specifically for that most demanding method of preparation. With bold, rich flavors and a name that signifies strength, Peet's Coffee Espresso Forte Dark Espresso Roast Coffee strikes the perfect balance between the earthy depth of coffee from the Indo-Pacific and the bright, lively spiciness that's characteristic of the Americas. Everything we love in espresso, this blend has effusive aroma, stout body and luscious crema enveloping a tangy core of pure coffee flavor. Fortissimo.`,
+        roast: 'Dark Roast',
+        isFeatured: false
     }
 ]
 
