@@ -25,7 +25,7 @@ router.get('/', function (req, res) {
 // New Route (GET/Read): This route renders a form 
 // which the user will fill out to POST (create) a new location
 router.get('/new', (req, res) => {
-    res.send('You\'ve hit the new route!')
+    res.render('new-form')
 })
 
 
@@ -33,8 +33,9 @@ router.get('/new', (req, res) => {
 /* Creates route, post/creates.
 Can be used to create the new espresso items, add items to the prodyucts page.*/
 router.post('/', (req, res) => {
+    console.log(req.body)
     db.Espresso.create(req.body)
-    .then(pet => {
+    .then(espresso => {
         res.json(espresso)
     })
 })
@@ -61,7 +62,11 @@ needed them to be fixed*/
 
 router.get('/:id/edit', (req, res)=> {
     db.Espresso.findById(req.params.id)
-    .then(espresso => res.send('Edit Espressso ID ' + espresso._id))
+    .then(espresso => {
+        res.render('edit-form', {
+            espresso: espresso
+        })
+    })
 })
 
 /* this will be your update route, so that once your edit route is hit, then it will re

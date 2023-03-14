@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: `Edit ${espresso.name} | Espresso Emporium`}) %>
+    <link rel="stylesheet" href="/styles/espresso-form.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>Edit Espresso Form</h1>
+
+    <form method="POST" action="/espressos/<%= espresso._id %>?_method=PUT">
+        <!-- Name input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= espresso.name %>" required>
+        <br>
+        <!-- Photo input -->
+        <label for="photo">Photo:</label>
+        <input type="text" id="photo" name="photo" value="<%= espresso.photo %>" required>
+        <br>
+        <!-- Price input -->
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" value="<%= espresso.price %>">
+        <br>
+        <!-- Roast Type input -->
+        <label for="roast">Roast Type:</label>
+        <input type="text" id="roast" name="roast" value="<%= espresso.roast %>" required>
+        <br>
+        </select>
+        <br>
+        <!-- Description input -->
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required><%= espresso.description %></textarea>
+        <br>
+        <input type="submit" value="Edit Espresso">
+    </form>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

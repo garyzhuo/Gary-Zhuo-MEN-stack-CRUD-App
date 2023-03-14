@@ -5,6 +5,8 @@ const path = require('path');
 const express = require('express');
 const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
+const methodOverride = require('method-override');
+
 
 /* Grabs the DB connection and seed data
 --------------------------------------------------------------- */
@@ -56,6 +58,10 @@ app.use(connectLiveReload());
 // into an object that can be accessed in the request parameter as a property called body (req.body).
 app.use(express.urlencoded({ extended: true }));
 
+// Allows us to interpret POST requests from the browser as another request type: DELETE, PUT, etc.
+app.use(methodOverride('_method'));
+
+
 /* Mount routes
 --------------------------------------------------------------- */
 app.get('/', function (req, res) {
@@ -84,13 +90,26 @@ app.get('/seed', function (req, res) {
         })
 });
 
+/* This will get us the about me apge */
+app.get('/about', function (req, res) {
+    res.send('You\'ve hit the about route')
+});
+
+
+
 
 app.use('/espressos', espressosCtrl)
 
+// The "catch-all" route: Runs for any other URL that doesn't match the above routes
+app.get('*', function (req, res) {
+    res.send('Caffeine Overdose: Page Not Found!')
+});
 
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */
 app.listen(process.env.PORT, function () {
     console.log('Express is listening to port', process.env.PORT);
 });
+
+
 

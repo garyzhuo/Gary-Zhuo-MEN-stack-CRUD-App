@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Add a Espresso | Espresso Emporium'}) %>
+    <link rel="stylesheet" href="/styles/espresso-form.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>Add New Espresso</h1>
+
+    <form method="POST" action="/espressos">
+        <!-- Name input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <!-- Photo input -->
+        <label for="photo">Photo URL (Copy Image URL):</label>
+        <input type="text" id="photo" name="photo" required>
+        <br>
+        <!-- Price input -->
+        <label for="price"> Price:</label>
+        <input type="text" id="price" name="price" value="Not Required">
+        <br>
+        <!-- Roast input -->
+        <label for="roast">Roast Type:</label>
+        <input type="text" id="roast" name="roast" required>
+        <br>
+        <!-- Description input -->
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"  value="Describe The Espresso. What does it taste like?" required></textarea>
+        <br>
+        <input type="submit" value="Add Espresso">
+    </form>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
