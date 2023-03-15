@@ -88,3 +88,10 @@ strong {
     width: 400px;
     text-align: left;
   }
+
+  @media (max-width: 500px) {
+    .btn {
+        padding: 1rem;
+        margin: 6px;
+    }
+  }

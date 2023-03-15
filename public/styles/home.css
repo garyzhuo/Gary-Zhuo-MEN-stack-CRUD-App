@@ -97,16 +97,8 @@ figcaption {
 
 
 @media (max-width: 400px) {
-    .about {
-      padding: 1rem;
-    }
-    
     body {
         background-color: #A07855;
-    }
-    
-    .about h2 {
-      font-size: 1.5rem;
     }
     
     .featured-espressos {
@@ -121,13 +113,8 @@ figcaption {
       width: calc(49% - 0.5rem);
       margin-bottom: 1rem;
     }
-    
-    .featured-info h3 {
-      font-size: 12px;
-    }
-    
-    .featured-info p {
-      font-size: 0.7rem;
+    .featured-espressos {
+        margin-bottom: 1rem;
     }
   }
   
