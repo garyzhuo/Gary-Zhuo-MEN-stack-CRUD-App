@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+* {
+    background-color: #A07855;
+}
+
+body {
+    background-color: #A07855;
+}
+
+#brewing-instructions {
+    font-family: 'Sono', sans-serif;
+    text-align: center;
+}
+
+.instructions-grid{
+    display: flex;
+    flex-flow: wrap;
+    align-self: auto;
+    justify-content: space-between;
+    list-style: none;
+    margin: 2rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.vid {
+    margin-top: 16px;
+}
+
+
+
+
+
+
+
+

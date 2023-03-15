@@ -16,6 +16,28 @@
             <p id="espressoDetails"><strong></strong> <%= espresso.description %></p>
             <p id="espressoRoast"><strong>Roast Type: </strong> <%= espresso.roast %></p>
         </section>
+
+        <section class="espressoActions">
+            <button id="edit-form" class="btn"><a href="/espressos/<%= espresso._id %>/edit">Edit</a></button>
+
+            <form id="delete-form" method="POST" action="/espressos/<%= espresso._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+            <script>
+                /*this creates it so when the user deletes something it will confirm with you just to make sure
+                before you accidentally delete something
+                https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete
+                https://stackoverflow.com/questions/10462839/how-to-display-a-confirmation-dialog-when-clicking-an-a-link
+                */
+                document.getElementById('delete-form').addEventListener('submit', function(event) {
+                    let confirmed = confirm('Are you sure you want to delete this espresso?');
+                    if (!confirmed) {
+                        event.preventDefault();
+                    }
+                });
+            </script>
+        </section>
+        
     </div>
 
     <%- include('./partials/footer.ejs') %>

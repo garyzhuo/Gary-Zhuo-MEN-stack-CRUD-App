@@ -73,6 +73,12 @@ app.get('/', function (req, res) {
     })
 })
 
+//gets the brewing instructions for the guests
+app.get('/brewing-instructions', (req, res) => {
+    res.render('brewing-instructions')
+}) 
+
+
 
 //this will reseed the document, removing any changes that you have implemented.
 //make sure you take out later
@@ -92,7 +98,7 @@ app.get('/seed', function (req, res) {
 
 /* This will get us the about me apge */
 app.get('/about', function (req, res) {
-    res.send('You\'ve hit the about route')
+    res.render('about')
 });
 
 
@@ -102,7 +108,7 @@ app.use('/espressos', espressosCtrl)
 
 // The "catch-all" route: Runs for any other URL that doesn't match the above routes
 app.get('*', function (req, res) {
-    res.send('Caffeine Overdose: Page Not Found!')
+    res.render('404')
 });
 
 /* Tell the app to listen on the specified port

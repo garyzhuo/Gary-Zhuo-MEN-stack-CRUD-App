@@ -81,13 +81,15 @@ router.put('/:id', (req, res) => {
         req.body,
         {new : true}
     )
-    .then(espresso => res.json(espresso))
+    .then(espresso => res.redirect('/espressos/' + espresso._id))
 })
 
 /* This is the delete route, allowing us to delete things on the webpage */
 router.delete('/:id', (req, res) => {
     db.Espresso.findByIdAndRemove(req.params.id)
-        .then(espresso => res.send('Espresso ID ' + espresso._id +'has been deleted'))
+        .then(espresso => 
+            res.redirect('/espressos'))
+
 })
 
 /* Esport these routes so that they are accessible in 'server.js'
