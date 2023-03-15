@@ -35,9 +35,10 @@ body {
 }
 
 @media (max-width: 500px) {
-    {
+   .instructions-grid {
         width: 40%;
         height: 40%;
+        margin-left: -10px;
     }
 }
 
