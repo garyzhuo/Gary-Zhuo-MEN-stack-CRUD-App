@@ -80,7 +80,9 @@ strong {
 .review {
     display: inline-block;
     font-family: 'Sono', sans-serif;
+    background-color: rgba(110, 78, 50, 0.5);
     color: black;
+    border: 2px solid #ccc;
     margin-top: 20px;
     margin-bottom: 10px;
     width: 400px;
