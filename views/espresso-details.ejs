@@ -23,6 +23,10 @@
             <form id="delete-form" method="POST" action="/espressos/<%= espresso._id %>?_method=DELETE">
                 <input class="btn" type="submit" value="Delete" />
             </form>
+
+            <button class="btn"><a href="/reviews/<%= espresso._id %>"</a>
+                Reviews
+          </button>
             <script>
                 /*this creates it so when the user deletes something it will confirm with you just to make sure
                 before you accidentally delete something
@@ -36,8 +40,37 @@
                     }
                 });
             </script>
+
         </section>
+
+
+        <div class="reviewTag">
+            <div class="review">
+                <% for (let review of reviews) { %>
+                    <p class="reviewTag"> 
+                        <h3 class="reviewH">
+                            User:
+                        </h3>
+                      <%= review.name %>
+                    </p>
+                    <p class="reviewTag"> 
+                        <h3 class="reviewH">
+                            Review: 
+                        </h3>
+                        <%= review.review %>
+                    </p>
+                    <p class="reviewTag"> 
+                        <h3 class="reviewH">
+                            Rating:
+                        </h3>
+                        <%= review.rating %>
+                    </p>
+              <%  } %>
+            </div>
+            </div>
         
+
+
     </div>
 
     <%- include('./partials/footer.ejs') %>

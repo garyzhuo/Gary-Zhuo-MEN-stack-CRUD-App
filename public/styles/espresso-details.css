@@ -69,3 +69,20 @@ strong {
 .btn a {
     color: #fff;
 }
+
+.reviewH {
+    font-family: 'Tilt Warp', cursive;
+    color: #F5D3B3;
+    letter-spacing: 1.9px;
+}
+
+
+.review {
+    display: inline-block;
+    font-family: 'Sono', sans-serif;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 400px;
+    text-align: left;
+  }

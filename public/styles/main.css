@@ -46,10 +46,15 @@ h1 a:hover {
     text-decoration: none;
 }
 
+/* .headerNav {
+    text-align: center;
+} */
+
 nav ul {
     display: flex;
     list-style: none;
     margin-left: 550px;
+
 }
 
 nav li:not(:last-child) {
@@ -58,6 +63,7 @@ nav li:not(:last-child) {
 
 nav a {
     font-size: 1.2rem;
+    
 }
 
 
@@ -120,6 +126,6 @@ footer * {
 footer ul {
     display: flex;
     list-style: none;
-    margin-left: 610px;
+    margin-left: 600px;
     font-family: 'Tilt Warp', cursive;
 }

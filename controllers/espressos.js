@@ -48,9 +48,11 @@ router.post('/', (req, res) => {
 router.get('/:id', function(req, res) {
     db.Espresso.findById(req.params.id)
     .then(espresso => {
+        console.log(espresso.reviews)
         // this will grab each indivdual espresso and show them according when selected on 'Learn More'
         res.render('espresso-details', {
-            espresso: espresso
+            espresso: espresso,
+            reviews: espresso.reviews
             })
         })
     .catch(() => res.send('404 Error: Page Not Found'))

@@ -1,5 +1,6 @@
 // Require the Mongoose package
 const mongoose = require('mongoose');
+const reviewSchema = require('./review');
 
 // This is my first schema, this would be used for my espresso coffee
 const espressoSchema = new mongoose.Schema({
@@ -8,7 +9,8 @@ const espressoSchema = new mongoose.Schema({
   price: String,
   description: String,
   isFeatured: { type: Boolean, default: false},
-  roast: String
+  roast: String,
+  reviews: [reviewSchema]
 });
 
 
