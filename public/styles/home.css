@@ -94,3 +94,40 @@ figcaption {
 .featured-info p {
     font-size: calc(0.5rem + 0.5vw);
 }
+
+
+@media (max-width: 400px) {
+    .about {
+      padding: 1rem;
+    }
+    
+    body {
+        background-color: #A07855;
+    }
+    
+    .about h2 {
+      font-size: 1.5rem;
+    }
+    
+    .featured-espressos {
+      padding: 1rem;
+    }
+    
+    .featured-espressos h2 {
+      font-size: 1.5rem;
+    }
+    
+    .espresso-grid li {
+      width: calc(49% - 0.5rem);
+      margin-bottom: 1rem;
+    }
+    
+    .featured-info h3 {
+      font-size: 12px;
+    }
+    
+    .featured-info p {
+      font-size: 0.7rem;
+    }
+  }
+  
