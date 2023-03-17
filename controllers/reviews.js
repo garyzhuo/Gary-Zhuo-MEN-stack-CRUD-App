@@ -22,15 +22,15 @@ router.get('/:id', (req, res) => {
 
 
 router.post('/create/:id', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     // Create a review
 db.Espresso.findByIdAndUpdate(
     req.params.id, // replace with your restaurant's ID
         { $push: { reviews: req.body } },
         { new: true }
 )
-    .then(espresso => console.log(espresso))
-
+    .then(espresso => 
+        res.redirect('/espressos/' + espresso._id))
 })
 
 // router.get('')

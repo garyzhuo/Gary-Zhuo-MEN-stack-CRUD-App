@@ -28,6 +28,11 @@ router.get('/new', (req, res) => {
     res.render('new-form')
 })
 
+//this will redirect my form back to the home page after submission
+// come back to this gary.
+// router.post('/submit', (req, res) => {
+//     res.redirect('/')
+// })
 
 
 /* Creates route, post/creates.
@@ -48,6 +53,7 @@ router.post('/', (req, res) => {
 router.get('/:id', function(req, res) {
     db.Espresso.findById(req.params.id)
     .then(espresso => {
+        // this will show me the reviews
         console.log(espresso.reviews)
         // this will grab each indivdual espresso and show them according when selected on 'Learn More'
         res.render('espresso-details', {
