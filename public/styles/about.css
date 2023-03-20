@@ -60,3 +60,10 @@ main {
     font-weight: bold;
     margin-right: 10px;
 }
+
+
+#aboutYou {
+    text-align: center;
+    font-family: 'Sono', sans-serif;
+    margin-top: 45px;
+}

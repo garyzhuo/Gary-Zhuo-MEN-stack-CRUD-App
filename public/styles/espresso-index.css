@@ -60,6 +60,15 @@ main {
     height: 450px;
 }
 
+
+img:hover {
+    /* box shadow idea was gotten from here
+    https://getcssscan.com/css-box-shadow-examples #53 i think it was */
+    box-shadow: rgba(133, 71, 17, 0.48) 6px 2px 16px 0px, 
+    rgba(160, 90, 5, 0.8) -6px -2px 16px 0px;
+}
+
+
 @media (max-width: 500px) {
     .espresso-grid {
     width: calc(39% - 0.5rem);
